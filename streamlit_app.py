@@ -7,3 +7,11 @@ st.write(
 st.write(
     "Let's test again!)."
 )
+import pandas as pd
+df = pd.DataFrame({
+  'first column': [1, 2, 3, 4],
+  'second column': [10, 20, 30, 40],
+  'fruits':['apple','banana','cherry','orange']  
+})
+
+df
