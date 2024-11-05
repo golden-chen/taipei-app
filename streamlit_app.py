@@ -7,7 +7,7 @@ if "logged_in" not in st.session_state:
 def login():
     if st.button("Log in"):
         pw=st.number_input('Please input password:')
-        if pw=='1234':
+        if pw=='1234.00':
             st.session_state.logged_in = True
             st.rerun()
 
