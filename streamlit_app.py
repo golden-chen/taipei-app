@@ -7,7 +7,8 @@ if "logged_in" not in st.session_state:
 def login():
     if st.button("Log in"):
         pw=st.number_input('Please input password:',value=None)
-        st.write("The current number is ", pw)        
+        st.write("The current number is ", pw)       
+        pw1=st.number_input('Please wait!',value=None)
         if pw=='1234.0':
             st.session_state.logged_in = True
             st.rerun()
@@ -26,7 +27,7 @@ st.sidebar.markdown("# Main page 🎈")
 
 st.title("🎈 My taipei story")
 st.write("Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/).")
-st.write(    "Let's test again!).")
+st.write(    "Let's test again!")
 if st.session_state.logged_in:
     pg = st.navigation(
         {
