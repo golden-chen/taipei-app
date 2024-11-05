@@ -9,7 +9,7 @@ def login():
         st.session_state.pw=st.number_input('Please input password:',value=None)
         st.write("The current number is ", st.session_state.pw)       
         pw1=st.number_input('Please wait!',value=None)
-        if st.session_state.pw=='1234.0':
+        if st.session_state.pw=='1234.00':
             st.session_state.logged_in = True
             st.rerun()
 
