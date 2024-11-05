@@ -12,7 +12,8 @@ def login():
         if st.session_state.pw=='1234.00':
             st.session_state.logged_in = True
             st.rerun()
-        else:st.write('password is wrong!')
+        else:
+            st.write('password is wrong!')
 def logout():
     if st.button("Log out"):
         st.session_state.logged_in = False
