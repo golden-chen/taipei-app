@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import foo
+foo.hello = 123
 st.markdown("# Page 2 ❄️")
 st.sidebar.markdown("# Page 2 ❄️")
 import pandas as pd
