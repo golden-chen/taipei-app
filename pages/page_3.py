@@ -88,10 +88,10 @@ with tab4:
         st.write(st.session_state.processed[option][0])
 with tab5:
     row1 = st.columns(2)
-    row2 = st.columns(2)
+    #row2 = st.columns(2)
     
-    for col in row1 + row2:
-        tile = col.container(height=130)
+    for col in row1:# + row2:
+        tile = col.container(height=150)
         tile.title(":balloon:")
         with tile:
             if st.button('Button-1'):
