@@ -89,11 +89,19 @@ with tab4:
 with tab5:
     row = st.columns(2)
     #row2 = st.columns(2)
-    t1=row[0].container(height=160)
-    t2=row[1].container(height=160)
+    t1=row[0].container(height=190)
+    t2=row[1].container(height=190)
     with t1:
         if st.button('Button 1'):
             st.write('Button 1 was clicked')
             if st.button('Button 2'):
         # This will never be executed.
                 st.write('Button 2 was clicked')
+                st.stop()
+    with t2:
+        if st.button('Sign up'):
+            name = st.text_input('Name')
+
+            if name:
+        # This will never be executed.
+                st.success(f'Welcome {name}')
