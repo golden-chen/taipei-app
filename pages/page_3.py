@@ -107,7 +107,7 @@ with tab5:
                 st.success(f'Welcome {name}')
 with tab6:
     file = st.file_uploader("Upload a file", type="csv")
-    df=pd.dataFrame()
+    df=pd.DataFrame()
     if st.button('Get data'):
         df = pd.read_csv(file)
         # This display will go away with the user's next action.
