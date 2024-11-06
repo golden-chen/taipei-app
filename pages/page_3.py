@@ -5,7 +5,7 @@ st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
 if 'button' not in st.session_state:
     st.session_state.button = False
-
+ 
 def click_button():
     st.session_state.button = not st.session_state.button
 
