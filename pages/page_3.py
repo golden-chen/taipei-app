@@ -59,3 +59,6 @@ with tab3:
     cols=st.columns(2)
     cols[0].header("An owl")
     cols[0].image("https://static.streamlit.io/examples/owl.jpg", width=100)
+    with cols[1].spinner('Wait for it...'):
+        time.sleep(5)
+    cols[1].success("Done!")
