@@ -10,7 +10,7 @@ with tab1:
     cols=st.columns(2)
     cols[0].image("https://static.streamlit.io/examples/cat.jpg", width=100)
     if 'button' not in st.session_state:
-    st.session_state.button = False
+        st.session_state.button = False
  
     def click_button():
         st.session_state.button = not st.session_state.button
