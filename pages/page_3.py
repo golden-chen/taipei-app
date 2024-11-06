@@ -62,4 +62,4 @@ with tab3:
     cols[0].image("https://static.streamlit.io/examples/owl.jpg", width=100)
     with st.spinner('Wait for it...'):
         time.sleep(5)
-    cols[1].success("Done!")
+    cols[1].success("Done!", icon="✅")
