@@ -65,10 +65,10 @@ with tab3:
     cols[1].success("Done!", icon="✅")
 with tab4:
     def expensive_process(option, add):
-    with st.spinner('Processing...'):
-        time.sleep(5)
-    df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C':[7, 8, 9]}) + add
-    return (df, add)
+        with st.spinner('Processing...'):
+            time.sleep(5)
+        df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C':[7, 8, 9]}) + add
+        return (df, add)
 
     cols = st.columns(2)
     option = cols[0].selectbox('Select a number', options=['1', '2', '3'])
