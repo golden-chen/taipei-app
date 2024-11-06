@@ -1,6 +1,7 @@
 import streamlit as st
 import foo
 import time
+import pandas as pd
 st.write(foo.hello)
 st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
