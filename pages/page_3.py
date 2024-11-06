@@ -5,7 +5,7 @@ import pandas as pd
 st.write(foo.hello)
 st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
-tab1, tab2, tab3 ,tab4= st.tabs(["Cat", "Dog", "Owl","frame"])
+tab1, tab2, tab3 ,tab4,tab5= st.tabs(["Cat", "Dog", "Owl","frame","container"])
 
 with tab1:
     cols=st.columns(2)
@@ -86,3 +86,15 @@ with tab4:
     if option in st.session_state.processed:
         st.write(f'Option {option} processed with add {add}')
         st.write(st.session_state.processed[option][0])
+with tab5:
+    row1 = st.columns(2)
+    row2 = st.columns(2)
+    
+    for col in row1 + row2:
+        tile = col.container(height=130)
+        tile.title(":balloon:")
+        if st.button('Button 1'):
+            st.write('Button 1 was clicked')
+            if st.button('Button 2'):
+                # This will never be executed.
+                st.write('Button 2 was clicked')
