@@ -94,8 +94,8 @@ with tab5:
         tile = col.container(height=130)
         tile.title(":balloon:")
         with tile:
-            if st.button('Button 1'):
+            if st.button('Button-1'):
                 st.write('Button 1 was clicked')
-                if st.button('Button 2'):
+                if st.button('Button-2'):
                     # This will never be executed.
                     st.write('Button 2 was clicked')
