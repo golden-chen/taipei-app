@@ -93,8 +93,9 @@ with tab5:
     for col in row1 + row2:
         tile = col.container(height=130)
         tile.title(":balloon:")
-        if st.button('Button 1'):
-            st.write('Button 1 was clicked')
-            if st.button('Button 2'):
-                # This will never be executed.
-                st.write('Button 2 was clicked')
+        with title:
+            if st.button('Button 1'):
+                st.write('Button 1 was clicked')
+                if st.button('Button 2'):
+                    # This will never be executed.
+                    st.write('Button 2 was clicked')
