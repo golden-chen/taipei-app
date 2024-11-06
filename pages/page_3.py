@@ -37,14 +37,14 @@ with tab2:
         st.session_state.stage = i
     
     if st.session_state.stage == 0:
-        st.button('Begin', on_click=set_state, args=[1])
+        cols[1].button('Begin', on_click=set_state, args=[1])
     
     if st.session_state.stage >= 1:
-        name = st.text_input('Name', on_change=set_state, args=[2])
+        name = cols[1].text_input('Name', on_change=set_state, args=[2])
     
     if st.session_state.stage >= 2:
-        st.write(f'Hello {name}!')
-        color = st.selectbox(
+        cols[1].write(f'Hello {name}!')
+        color = cols[1].selectbox(
             'Pick a Color',
             [None, 'red', 'orange', 'green', 'blue', 'violet'],
             on_change=set_state, args=[3]
@@ -53,8 +53,8 @@ with tab2:
             set_state(2)
 
     if st.session_state.stage >= 3:
-        st.write(f':{color}[Thank you!]')
-        st.button('Start Over', on_click=set_state, args=[0])
+        cols[1].write(f':{color}[Thank you!]')
+        cols[1].button('Start Over', on_click=set_state, args=[0])
 with tab3:
     cols=st.columns(2)
     cols[0].header("An owl")
