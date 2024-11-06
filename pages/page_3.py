@@ -15,16 +15,16 @@ with tab1:
     def click_button():
         st.session_state.button = not st.session_state.button
     
-    st.button('Click me', on_click=click_button)
+    cols[1].button('Click me', on_click=click_button)
     
     if st.session_state.button:
         # The message and nested widget will remain on the page
-        st.write('Button is on!')
-        st.slider('Select a value')
+        cols[1].write('Button is on!')
+        cols[1].slider('Select a value')
     else:
-        st.write('Button is off!')
-    st.divider()
-    st.slider('Set a value', disabled=not st.session_state.button)
+        cols[1].write('Button is off!')
+    cols[1].divider()
+    cols[1].slider('Set a value', disabled=not st.session_state.button)
 
 with tab2:
     st.header("A dog")
