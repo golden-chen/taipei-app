@@ -31,7 +31,7 @@ with tab2:
     cols[0].header("A dog")
     cols[0].image("https://static.streamlit.io/examples/dog.jpg", width=100)
     if 'stage' not in st.session_state:
-    st.session_state.stage = 0
+        st.session_state.stage = 0
 
     def set_state(i):
         st.session_state.stage = i
