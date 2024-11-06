@@ -17,5 +17,5 @@ if st.session_state.button:
     st.slider('Select a value')
 else:
     st.write('Button is off!')
-'divider()
+divider()
 st.slider('Select a good value', disabled=st.session_state.button)
