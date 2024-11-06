@@ -5,7 +5,7 @@ import pandas as pd
 st.write(foo.hello)
 st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
-tab1, tab2, tab3 ,tab4,tab5= st.tabs(["Cat", "Dog", "Owl","frame","container"])
+tab1, tab2, tab3 ,tab4,tab5,tab6= st.tabs(["Cat", "Dog", "Owl","frame","container","rw_csv"])
 
 with tab1:
     cols=st.columns(2)
@@ -105,3 +105,14 @@ with tab5:
             if name:
         # This will never be executed.
                 st.success(f'Welcome {name}')
+with tab6:
+    file = st.file_uploader("Upload a file", type="csv")
+
+    if st.button('Get data'):
+        df = pd.read_csv(file)
+        # This display will go away with the user's next action.
+        st.write(df)
+    
+    if st.button('Save'):
+        # This will always error.
+        df.to_csv('data.csv')
