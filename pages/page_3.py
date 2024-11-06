@@ -87,15 +87,13 @@ with tab4:
         st.write(f'Option {option} processed with add {add}')
         st.write(st.session_state.processed[option][0])
 with tab5:
-    row1 = st.columns(2)
+    row = st.columns(2)
     #row2 = st.columns(2)
-    
-    for col in row1:# + row2:
-        tile = col.container(height=150)
-        tile.title(":balloon:")
-        with tile:
-            if st.button('Button-1'):
-                st.write('Button 1 was clicked')
-                if st.button('Button-2'):
-                    # This will never be executed.
-                    st.write('Button 2 was clicked')
+    t1=row[0].container(height=160)
+    t2=row[1].container(height=160)
+    with t1:
+        if st.button('Button 1'):
+            st.write('Button 1 was clicked')
+            if st.button('Button 2'):
+        # This will never be executed.
+                st.write('Button 2 was clicked')
