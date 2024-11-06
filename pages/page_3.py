@@ -93,7 +93,7 @@ with tab5:
     for col in row1 + row2:
         tile = col.container(height=130)
         tile.title(":balloon:")
-        with title:
+        with tile:
             if st.button('Button 1'):
                 st.write('Button 1 was clicked')
                 if st.button('Button 2'):
