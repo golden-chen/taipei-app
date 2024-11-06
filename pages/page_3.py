@@ -6,8 +6,8 @@ st.sidebar.markdown("# Page 3 🎉")
 tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
-    st.header("A cat")
     cols=st.columns(2)
+    cols[0].header("A cat")
     cols[0].image("https://static.streamlit.io/examples/cat.jpg", width=100)
     if 'button' not in st.session_state:
         st.session_state.button = False
@@ -27,8 +27,10 @@ with tab1:
     cols[1].slider('Set a value', disabled=not st.session_state.button)
 
 with tab2:
-    st.header("A dog")
-    st.image("https://static.streamlit.io/examples/dog.jpg", width=100)
+    cols=st.columns(2)
+    cols[0].header("A dog")
+    cols[0].image("https://static.streamlit.io/examples/dog.jpg", width=100)
 with tab3:
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=100)
+    cols=st.columns(2)
+    cols[0].header("An owl")
+    cols[0].image("https://static.streamlit.io/examples/owl.jpg", width=100)
