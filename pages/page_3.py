@@ -126,3 +126,7 @@ with tab7:
     )
     
     st.dataframe(df, use_container_width=True)
+    edited_df = st.data_editor(df) # 👈 An editable dataframe
+
+    favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
+    st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
