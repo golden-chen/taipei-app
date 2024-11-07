@@ -5,7 +5,7 @@ import pandas as pd
 st.write(foo.hello)
 st.markdown("# Page 3 🎉")
 st.sidebar.markdown("# Page 3 🎉")
-tab1, tab2, tab3 ,tab4,tab5,tab6= st.tabs(["Cat", "Dog", "Owl","frame","container","rw_csv"])
+tab1, tab2, tab3 ,tab4,tab5,tab6,tab7= st.tabs(["Cat", "Dog", "Owl","frame","container","rw_csv","data"])
 
 with tab1:
     cols=st.columns(2)
@@ -116,3 +116,13 @@ with tab6:
     if st.button('Save'):
         # This will always error.
         df.to_csv('data.csv')
+with tab7:
+    df = pd.DataFrame(
+    [
+        {"command": "st.selectbox", "rating": 4, "is_widget": True},
+        {"command": "st.balloons", "rating": 5, "is_widget": False},
+        {"command": "st.time_input", "rating": 3, "is_widget": True},
+    ]
+    )
+    
+    st.dataframe(df, use_container_width=True)
