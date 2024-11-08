@@ -19,6 +19,7 @@ login_page = st.Page(login, title="Log in", icon=":material/login:")
 logout_page = st.Page(logout, title="Log out", icon=":material/logout:")
 story2_page = st.Page('pages/page_2.py', title="story2", icon=":material/home:")
 story3_page = st.Page("pages/page_3.py", title="story3", icon=":material/key:")
+story4_page = st.Page("pages/page_4.py", title="story4", icon=":material/key:")
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
@@ -29,7 +30,7 @@ if st.session_state.logged_in:
     pg = st.navigation(
         {
             "Account": [logout_page],
-            "Storys": [story2_page,story3_page],
+            "Storys": [story2_page,story3_page,story4_page],
             
         }
     )
