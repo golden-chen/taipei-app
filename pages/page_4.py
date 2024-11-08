@@ -1,4 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
+from flask.ext.sqlalchemy import SQLAlchemy
 import streamlit as st
 
 # Create the SQL connection to pets_db as specified in your secrets file.
