@@ -14,7 +14,7 @@ def logout():
     if st.button("Log out"):
         st.session_state.logged_in = False
         st.rerun()
-
+ 
 login_page = st.Page(login, title="Log in", icon=":material/login:")
 logout_page = st.Page(logout, title="Log out", icon=":material/logout:")
 story2_page = st.Page('pages/page_2.py', title="story2", icon=":material/home:")
